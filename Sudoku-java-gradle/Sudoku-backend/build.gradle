@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id("io.freefair.lombok") version "8.13.1"
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compileOnly("org.projectlombok:lombok:1.18.38")
+	annotationProcessor("org.projectlombok:lombok:1.18.38")
+
+	testCompileOnly("org.projectlombok:lombok:1.18.38")
+	testAnnotationProcessor("org.projectlombok:lombok:1.18.38")
+	testCompile 'org.testng:testng:7.9.0'
+}
+
+test {
+	useTestNG {
+		includeGroups 'unitTests'
+		excludeGroups 'integrationTests'
+	}
+}
