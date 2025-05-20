@@ -1,0 +1,7 @@
+**/.gradle/**
+**/.idea/**
+**/build/**
+Sudoku-java-gradle/gradle/
+Sudoku-java-gradle/gradlew
+Sudoku-java-gradle/gradlew.bat
+
